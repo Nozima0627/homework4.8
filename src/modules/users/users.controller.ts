@@ -16,7 +16,7 @@ export class UsersController {
     @UseGuards(AuthGuard)
     @Get("one")
     getOneUser(
-        @Req() req: Request
+        @Req() req: Request,
         @User("firstname") firstname : string
     ){
         return this.userService.getOneUser(req['user']);
